@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app/pages/add_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -22,7 +23,10 @@ class _MyHomePageState extends State<HomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (context) => AddPage()));
+        },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
